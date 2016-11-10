@@ -1,0 +1,966 @@
+2016-11-10 20:38:41.457  INFO 7181 --- [main] c.u.p.SpringBootCamelActivemqApplication : Starting SpringBootCamelActivemqApplication on chris-ThinkPad-X1-Carbon-2nd with PID 7181 (/home/chris/dev/spring-boot-camel-activemq/target/classes started by chris in /home/chris/dev/spring-boot-camel-activemq)
+2016-11-10 20:38:41.462  INFO 7181 --- [main] c.u.p.SpringBootCamelActivemqApplication : No active profile set, falling back to default profiles: default
+2016-11-10 20:38:41.883  INFO 7181 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2b662a77: startup date [Thu Nov 10 20:38:41 GMT 2016]; root of context hierarchy
+2016-11-10 20:38:43.951  INFO 7181 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [class org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$30a7cf5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-10 20:38:44.469  INFO 7181 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-10 20:38:44.484  INFO 7181 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 20:38:44.486  INFO 7181 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 20:38:44.598  INFO 7181 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-10 20:38:44.598  INFO 7181 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2719 ms
+2016-11-10 20:38:44.936  INFO 7181 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 20:38:44.944  INFO 7181 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2016-11-10 20:38:44.945  INFO 7181 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-10 20:38:44.945  INFO 7181 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-10 20:38:44.947  INFO 7181 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-10 20:38:44.948  INFO 7181 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-10 20:38:44.948  INFO 7181 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-11-10 20:38:44.949  INFO 7181 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-11-10 20:38:45.741  INFO 7181 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is starting
+2016-11-10 20:38:45.744  INFO 7181 --- [main] o.a.c.m.ManagedManagementStrategy        : JMX is enabled
+2016-11-10 20:38:45.915  INFO 7181 --- [main] o.a.c.i.converter.DefaultTypeConverter   : Loaded 190 type converters
+2016-11-10 20:38:45.944  INFO 7181 --- [main] o.a.c.i.DefaultRuntimeEndpointRegistry   : Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2016-11-10 20:38:46.046  INFO 7181 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutting down
+2016-11-10 20:38:46.091  INFO 7181 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) uptime 0.350 seconds
+2016-11-10 20:38:46.091  INFO 7181 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutdown in 0.044 seconds
+2016-11-10 20:38:46.092  WARN 7181 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'camelContext' defined in co.uk.popupengineering.SpringBootCamelActivemqApplication: Invocation of init method failed; nested exception is org.apache.camel.FailedToCreateRouteException: Failed to create route route1: Route(route1)[[From[jms:test.input]] -> [Log[${body}], To[jm... because of Failed to resolve endpoint: jms://test.input due to: No component found with scheme: jms
+2016-11-10 20:38:46.096  INFO 7181 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-11-10 20:38:46.122  INFO 7181 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-10 20:38:46.131 ERROR 7181 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'camelContext' defined in co.uk.popupengineering.SpringBootCamelActivemqApplication: Invocation of init method failed; nested exception is org.apache.camel.FailedToCreateRouteException: Failed to create route route1: Route(route1)[[From[jms:test.input]] -> [Log[${body}], To[jm... because of Failed to resolve endpoint: jms://test.input due to: No component found with scheme: jms
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at co.uk.popupengineering.SpringBootCamelActivemqApplication.main(SpringBootCamelActivemqApplication.java:18) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147) [idea_rt.jar:na]
+Caused by: org.apache.camel.FailedToCreateRouteException: Failed to create route route1: Route(route1)[[From[jms:test.input]] -> [Log[${body}], To[jm... because of Failed to resolve endpoint: jms://test.input due to: No component found with scheme: jms
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:201) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRoute(DefaultCamelContext.java:1008) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:3397) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3128) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.access$000(DefaultCamelContext.java:182) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:2957) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:2953) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.doWithDefinedClassLoader(DefaultCamelContext.java:2976) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.doStart(DefaultCamelContext.java:2953) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2920) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.spring.SpringCamelContext.maybeStart(SpringCamelContext.java:275) ~[camel-spring-2.18.0.jar:2.18.0]
+	at org.apache.camel.spring.SpringCamelContext.afterPropertiesSet(SpringCamelContext.java:122) ~[camel-spring-2.18.0.jar:2.18.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	... 21 common frames omitted
+Caused by: org.apache.camel.ResolveEndpointFailedException: Failed to resolve endpoint: jms://test.input due to: No component found with scheme: jms
+	at org.apache.camel.impl.DefaultCamelContext.getEndpoint(DefaultCamelContext.java:628) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.util.CamelContextHelper.getMandatoryEndpoint(CamelContextHelper.java:79) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.model.RouteDefinition.resolveEndpoint(RouteDefinition.java:211) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultRouteContext.resolveEndpoint(DefaultRouteContext.java:108) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultRouteContext.resolveEndpoint(DefaultRouteContext.java:114) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.model.FromDefinition.resolveEndpoint(FromDefinition.java:69) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultRouteContext.getEndpoint(DefaultRouteContext.java:90) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:1051) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:196) ~[camel-core-2.18.0.jar:2.18.0]
+	... 35 common frames omitted
+
+2016-11-10 20:40:09.745  INFO 7270 --- [main] c.u.p.SpringBootCamelActivemqApplication : Starting SpringBootCamelActivemqApplication on chris-ThinkPad-X1-Carbon-2nd with PID 7270 (/home/chris/dev/spring-boot-camel-activemq/target/classes started by chris in /home/chris/dev/spring-boot-camel-activemq)
+2016-11-10 20:40:09.752  INFO 7270 --- [main] c.u.p.SpringBootCamelActivemqApplication : No active profile set, falling back to default profiles: default
+2016-11-10 20:40:10.518  INFO 7270 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2b662a77: startup date [Thu Nov 10 20:40:10 GMT 2016]; root of context hierarchy
+2016-11-10 20:40:12.340  INFO 7270 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [class org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$8e424e68] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-10 20:40:12.970  INFO 7270 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-10 20:40:12.993  INFO 7270 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 20:40:12.994  INFO 7270 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 20:40:13.129  INFO 7270 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-10 20:40:13.132  INFO 7270 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2617 ms
+2016-11-10 20:40:13.425  INFO 7270 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 20:40:13.433  INFO 7270 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2016-11-10 20:40:13.433  INFO 7270 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-10 20:40:13.434  INFO 7270 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-10 20:40:13.434  INFO 7270 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-10 20:40:13.434  INFO 7270 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-10 20:40:13.435  INFO 7270 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-11-10 20:40:13.435  INFO 7270 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-11-10 20:40:14.185  INFO 7270 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is starting
+2016-11-10 20:40:14.188  INFO 7270 --- [main] o.a.c.m.ManagedManagementStrategy        : JMX is enabled
+2016-11-10 20:40:14.359  INFO 7270 --- [main] o.a.c.i.converter.DefaultTypeConverter   : Loaded 190 type converters
+2016-11-10 20:40:14.396  INFO 7270 --- [main] o.a.c.i.DefaultRuntimeEndpointRegistry   : Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2016-11-10 20:40:14.448  INFO 7270 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutting down
+2016-11-10 20:40:14.485  INFO 7270 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) uptime 0.300 seconds
+2016-11-10 20:40:14.485  INFO 7270 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutdown in 0.036 seconds
+2016-11-10 20:40:14.487  WARN 7270 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'camelContext' defined in co.uk.popupengineering.SpringBootCamelActivemqApplication: Invocation of init method failed; nested exception is org.apache.camel.FailedToCreateRouteException: Failed to create route route1: Route(route1)[[From[jms:test.input]] -> [Log[${body}], To[jm... because of Failed to resolve endpoint: jms://test.input due to: No component found with scheme: jms
+2016-11-10 20:40:14.494  INFO 7270 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-11-10 20:40:14.518  INFO 7270 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-10 20:40:14.527 ERROR 7270 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'camelContext' defined in co.uk.popupengineering.SpringBootCamelActivemqApplication: Invocation of init method failed; nested exception is org.apache.camel.FailedToCreateRouteException: Failed to create route route1: Route(route1)[[From[jms:test.input]] -> [Log[${body}], To[jm... because of Failed to resolve endpoint: jms://test.input due to: No component found with scheme: jms
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at co.uk.popupengineering.SpringBootCamelActivemqApplication.main(SpringBootCamelActivemqApplication.java:24) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147) [idea_rt.jar:na]
+Caused by: org.apache.camel.FailedToCreateRouteException: Failed to create route route1: Route(route1)[[From[jms:test.input]] -> [Log[${body}], To[jm... because of Failed to resolve endpoint: jms://test.input due to: No component found with scheme: jms
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:201) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRoute(DefaultCamelContext.java:1008) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:3397) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3128) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.access$000(DefaultCamelContext.java:182) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:2957) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:2953) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.doWithDefinedClassLoader(DefaultCamelContext.java:2976) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.doStart(DefaultCamelContext.java:2953) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2920) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.spring.SpringCamelContext.maybeStart(SpringCamelContext.java:275) ~[camel-spring-2.18.0.jar:2.18.0]
+	at org.apache.camel.spring.SpringCamelContext.afterPropertiesSet(SpringCamelContext.java:122) ~[camel-spring-2.18.0.jar:2.18.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	... 21 common frames omitted
+Caused by: org.apache.camel.ResolveEndpointFailedException: Failed to resolve endpoint: jms://test.input due to: No component found with scheme: jms
+	at org.apache.camel.impl.DefaultCamelContext.getEndpoint(DefaultCamelContext.java:628) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.util.CamelContextHelper.getMandatoryEndpoint(CamelContextHelper.java:79) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.model.RouteDefinition.resolveEndpoint(RouteDefinition.java:211) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultRouteContext.resolveEndpoint(DefaultRouteContext.java:108) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultRouteContext.resolveEndpoint(DefaultRouteContext.java:114) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.model.FromDefinition.resolveEndpoint(FromDefinition.java:69) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultRouteContext.getEndpoint(DefaultRouteContext.java:90) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:1051) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:196) ~[camel-core-2.18.0.jar:2.18.0]
+	... 35 common frames omitted
+
+2016-11-10 20:43:35.631  INFO 7388 --- [main] c.u.p.SpringBootCamelActivemqApplication : Starting SpringBootCamelActivemqApplication on chris-ThinkPad-X1-Carbon-2nd with PID 7388 (/home/chris/dev/spring-boot-camel-activemq/target/classes started by chris in /home/chris/dev/spring-boot-camel-activemq)
+2016-11-10 20:43:35.637  INFO 7388 --- [main] c.u.p.SpringBootCamelActivemqApplication : No active profile set, falling back to default profiles: default
+2016-11-10 20:43:36.342  INFO 7388 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72d1ad2e: startup date [Thu Nov 10 20:43:36 GMT 2016]; root of context hierarchy
+2016-11-10 20:43:38.343  INFO 7388 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [class org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$8faf2fb6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-10 20:43:38.938  INFO 7388 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-10 20:43:38.953  INFO 7388 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 20:43:38.955  INFO 7388 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 20:43:39.089  INFO 7388 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-10 20:43:39.090  INFO 7388 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2753 ms
+2016-11-10 20:43:39.459  INFO 7388 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 20:43:39.465  INFO 7388 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2016-11-10 20:43:39.466  INFO 7388 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-10 20:43:39.466  INFO 7388 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-10 20:43:39.466  INFO 7388 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-10 20:43:39.467  INFO 7388 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-10 20:43:39.467  INFO 7388 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-11-10 20:43:39.467  INFO 7388 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-11-10 20:43:40.606  INFO 7388 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72d1ad2e: startup date [Thu Nov 10 20:43:36 GMT 2016]; root of context hierarchy
+2016-11-10 20:43:40.705  INFO 7388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-10 20:43:40.707  INFO 7388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-10 20:43:40.758  INFO 7388 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 20:43:40.758  INFO 7388 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 20:43:40.826  INFO 7388 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 20:43:40.878  WARN 7388 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-10 20:43:41.345  INFO 7388 --- [main] o.a.c.i.converter.DefaultTypeConverter   : Loaded 190 type converters
+2016-11-10 20:43:42.416  INFO 7388 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-11-10 20:43:42.428  INFO 7388 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@626e0c86: startup date [Thu Nov 10 20:43:42 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72d1ad2e
+2016-11-10 20:43:42.468  INFO 7388 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=endpointWebMvcChildContextConfiguration; factoryMethodName=compositeHandlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcChildContextConfiguration]
+2016-11-10 20:43:42.531  INFO 7388 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2016-11-10 20:43:42.532  INFO 7388 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 20:43:42.533  INFO 7388 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 20:43:42.541  INFO 7388 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2016-11-10 20:43:42.541  INFO 7388 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 113 ms
+2016-11-10 20:43:42.549  INFO 7388 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 20:43:42.745  INFO 7388 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-11-10 20:43:42.751  INFO 7388 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-11-10 20:43:42.752  INFO 7388 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 20:43:42.756  INFO 7388 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 20:43:42.758  INFO 7388 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-11-10 20:43:42.759  INFO 7388 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 20:43:42.760  INFO 7388 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 20:43:42.762  INFO 7388 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 20:43:42.763  INFO 7388 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2016-11-10 20:43:42.764  INFO 7388 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-11-10 20:43:42.768  INFO 7388 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 20:43:42.772  INFO 7388 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 20:43:42.774  INFO 7388 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 20:43:42.775  INFO 7388 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 20:43:42.800  INFO 7388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.boot.actuate.endpoint.mvc.ManagementErrorEndpoint.invoke()
+2016-11-10 20:43:42.815  INFO 7388 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 20:43:42.816  INFO 7388 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 20:43:42.838  INFO 7388 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@626e0c86: startup date [Thu Nov 10 20:43:42 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72d1ad2e
+2016-11-10 20:43:42.966  INFO 7388 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2016-11-10 20:43:42.973  INFO 7388 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-11-10 20:43:43.082  INFO 7388 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-11-10 20:43:43.140  INFO 7388 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML routes from: classpath:camel/*.xml
+2016-11-10 20:43:43.141  INFO 7388 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+2016-11-10 20:43:43.142  INFO 7388 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is starting
+2016-11-10 20:43:43.144  INFO 7388 --- [main] o.a.c.m.ManagedManagementStrategy        : JMX is enabled
+2016-11-10 20:43:43.308  INFO 7388 --- [main] o.a.c.i.DefaultRuntimeEndpointRegistry   : Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2016-11-10 20:43:43.323  INFO 7388 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutting down
+2016-11-10 20:43:43.355  INFO 7388 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) uptime 0.213 seconds
+2016-11-10 20:43:43.355  INFO 7388 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutdown in 0.031 seconds
+2016-11-10 20:43:43.356  INFO 7388 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-11-10 20:43:43.369  INFO 7388 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-10 20:43:43.370  INFO 7388 --- [main] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@626e0c86: startup date [Thu Nov 10 20:43:42 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72d1ad2e
+2016-11-10 20:43:43.377  INFO 7388 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-11-10 20:43:43.393 ERROR 7388 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.apache.camel.spring.boot.CamelSpringBootInitializationException: org.apache.camel.FailedToCreateRouteException: Failed to create route route1: Route(route1)[[From[jms:test.input]] -> [Log[${body}], To[jm... because of Failed to resolve endpoint: jms://test.input due to: No component found with scheme: jms
+	at org.apache.camel.spring.boot.RoutesCollector.onApplicationEvent(RoutesCollector.java:124) ~[camel-spring-boot-2.18.0.jar:2.18.0]
+	at org.apache.camel.spring.boot.RoutesCollector.onApplicationEvent(RoutesCollector.java:41) ~[camel-spring-boot-2.18.0.jar:2.18.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:383) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:337) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:882) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:144) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at co.uk.popupengineering.SpringBootCamelActivemqApplication.main(SpringBootCamelActivemqApplication.java:26) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147) [idea_rt.jar:na]
+Caused by: org.apache.camel.FailedToCreateRouteException: Failed to create route route1: Route(route1)[[From[jms:test.input]] -> [Log[${body}], To[jm... because of Failed to resolve endpoint: jms://test.input due to: No component found with scheme: jms
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:201) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRoute(DefaultCamelContext.java:1008) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:3397) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3128) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.access$000(DefaultCamelContext.java:182) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:2957) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:2953) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.doWithDefinedClassLoader(DefaultCamelContext.java:2976) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.doStart(DefaultCamelContext.java:2953) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2920) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.spring.boot.RoutesCollector.maybeStart(RoutesCollector.java:141) ~[camel-spring-boot-2.18.0.jar:2.18.0]
+	at org.apache.camel.spring.boot.RoutesCollector.onApplicationEvent(RoutesCollector.java:116) ~[camel-spring-boot-2.18.0.jar:2.18.0]
+	... 20 common frames omitted
+Caused by: org.apache.camel.ResolveEndpointFailedException: Failed to resolve endpoint: jms://test.input due to: No component found with scheme: jms
+	at org.apache.camel.impl.DefaultCamelContext.getEndpoint(DefaultCamelContext.java:628) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.util.CamelContextHelper.getMandatoryEndpoint(CamelContextHelper.java:79) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.model.RouteDefinition.resolveEndpoint(RouteDefinition.java:211) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultRouteContext.resolveEndpoint(DefaultRouteContext.java:108) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultRouteContext.resolveEndpoint(DefaultRouteContext.java:114) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.model.FromDefinition.resolveEndpoint(FromDefinition.java:69) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.impl.DefaultRouteContext.getEndpoint(DefaultRouteContext.java:90) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:1051) ~[camel-core-2.18.0.jar:2.18.0]
+	at org.apache.camel.model.RouteDefinition.addRoutes(RouteDefinition.java:196) ~[camel-core-2.18.0.jar:2.18.0]
+	... 32 common frames omitted
+
+2016-11-10 20:43:43.395  INFO 7388 --- [main] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72d1ad2e: startup date [Thu Nov 10 20:43:36 GMT 2016]; root of context hierarchy
+2016-11-10 20:43:43.398  INFO 7388 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-11-10 20:43:43.399  INFO 7388 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-11-10 20:43:43.401  INFO 7388 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-11-10 21:18:41.329  INFO 8441 --- [main] c.u.p.SpringBootCamelActivemqApplication : Starting SpringBootCamelActivemqApplication on chris-ThinkPad-X1-Carbon-2nd with PID 8441 (/home/chris/dev/spring-boot-camel-activemq/target/classes started by chris in /home/chris/dev/spring-boot-camel-activemq)
+2016-11-10 21:18:41.340  INFO 8441 --- [main] c.u.p.SpringBootCamelActivemqApplication : No active profile set, falling back to default profiles: default
+2016-11-10 21:18:41.992  INFO 8441 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:18:41 GMT 2016]; root of context hierarchy
+2016-11-10 21:18:44.080  INFO 8441 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [class org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$19a400af] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-10 21:18:44.614  INFO 8441 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-10 21:18:44.634  INFO 8441 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 21:18:44.636  INFO 8441 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 21:18:44.777  INFO 8441 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-10 21:18:44.778  INFO 8441 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2793 ms
+2016-11-10 21:18:45.129  INFO 8441 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 21:18:45.135  INFO 8441 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2016-11-10 21:18:45.136  INFO 8441 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-10 21:18:45.137  INFO 8441 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-10 21:18:45.137  INFO 8441 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-10 21:18:45.137  INFO 8441 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-10 21:18:45.137  INFO 8441 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-11-10 21:18:45.138  INFO 8441 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-11-10 21:18:46.341  INFO 8441 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:18:41 GMT 2016]; root of context hierarchy
+2016-11-10 21:18:46.466  INFO 8441 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-10 21:18:46.468  INFO 8441 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-10 21:18:46.515  INFO 8441 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:18:46.515  INFO 8441 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:18:46.569  INFO 8441 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:18:46.626  WARN 8441 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-10 21:18:47.126  INFO 8441 --- [main] o.a.c.i.converter.DefaultTypeConverter   : Loaded 193 type converters
+2016-11-10 21:18:48.194  INFO 8441 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-11-10 21:18:48.207  INFO 8441 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e30db85: startup date [Thu Nov 10 21:18:48 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:18:48.254  INFO 8441 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=endpointWebMvcChildContextConfiguration; factoryMethodName=compositeHandlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcChildContextConfiguration]
+2016-11-10 21:18:48.318  INFO 8441 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2016-11-10 21:18:48.319  INFO 8441 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 21:18:48.319  INFO 8441 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 21:18:48.325  INFO 8441 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2016-11-10 21:18:48.325  INFO 8441 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 118 ms
+2016-11-10 21:18:48.332  INFO 8441 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 21:18:48.500  INFO 8441 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:18:48.501  INFO 8441 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:18:48.503  INFO 8441 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2016-11-10 21:18:48.504  INFO 8441 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:18:48.505  INFO 8441 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:18:48.507  INFO 8441 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:18:48.508  INFO 8441 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-11-10 21:18:48.510  INFO 8441 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:18:48.513  INFO 8441 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:18:48.514  INFO 8441 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-11-10 21:18:48.518  INFO 8441 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-11-10 21:18:48.518  INFO 8441 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:18:48.519  INFO 8441 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-11-10 21:18:48.520  INFO 8441 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:18:48.540  INFO 8441 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.boot.actuate.endpoint.mvc.ManagementErrorEndpoint.invoke()
+2016-11-10 21:18:48.550  INFO 8441 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:18:48.551  INFO 8441 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:18:48.563  INFO 8441 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e30db85: startup date [Thu Nov 10 21:18:48 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:18:48.675  INFO 8441 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2016-11-10 21:18:48.682  INFO 8441 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-11-10 21:18:48.805  INFO 8441 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-11-10 21:18:48.880  INFO 8441 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML routes from: classpath:camel/*.xml
+2016-11-10 21:18:48.881  INFO 8441 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+2016-11-10 21:18:48.882  INFO 8441 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is starting
+2016-11-10 21:18:48.883  INFO 8441 --- [main] o.a.c.m.ManagedManagementStrategy        : JMX is enabled
+2016-11-10 21:18:49.040  INFO 8441 --- [main] o.a.c.i.DefaultRuntimeEndpointRegistry   : Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2016-11-10 21:18:49.216  INFO 8441 --- [main] o.a.camel.spring.SpringCamelContext      : StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2016-11-10 21:18:49.512  INFO 8441 --- [main] o.a.camel.spring.SpringCamelContext      : Route: route1 started and consuming from: jms://test.input
+2016-11-10 21:18:49.513  INFO 8441 --- [main] o.a.camel.spring.SpringCamelContext      : Total 1 routes, of which 1 are started.
+2016-11-10 21:18:49.514  INFO 8441 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) started in 0.632 seconds
+2016-11-10 21:18:49.522  INFO 8441 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-11-10 21:18:49.526  INFO 8441 --- [main] c.u.p.SpringBootCamelActivemqApplication : Started SpringBootCamelActivemqApplication in 9.1 seconds (JVM running for 9.736)
+2016-11-10 21:18:54.529  INFO 8441 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : JMS message listener invoker needs to establish shared Connection
+2016-11-10 21:18:54.532 ERROR 8441 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:18:59.534 ERROR 8441 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=1, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:19:04.536 ERROR 8441 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=2, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:19:09.538 ERROR 8441 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=3, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:19:14.540 ERROR 8441 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=4, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:19:19.543 ERROR 8441 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=5, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:19:22.837  INFO 8441 --- [Thread-4] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:18:41 GMT 2016]; root of context hierarchy
+2016-11-10 21:19:22.843  INFO 8441 --- [Thread-4] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e30db85: startup date [Thu Nov 10 21:18:48 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:19:22.906  INFO 8441 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-11-10 21:19:22.907  INFO 8441 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-11-10 21:19:22.908  INFO 8441 --- [Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-11-10 21:19:22.915  INFO 8441 --- [Thread-4] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutting down
+2016-11-10 21:19:22.916  INFO 8441 --- [Thread-4] o.a.camel.impl.DefaultShutdownStrategy   : Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2016-11-10 21:19:22.921  INFO 8441 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.impl.DefaultShutdownStrategy   : Route: route1 shutdown complete, was consuming from: jms://test.input
+2016-11-10 21:19:22.922  INFO 8441 --- [Thread-4] o.a.camel.impl.DefaultShutdownStrategy   : Graceful shutdown of 1 routes completed in 0 seconds
+2016-11-10 21:19:22.960  INFO 8441 --- [Thread-4] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) uptime 34.079 seconds
+2016-11-10 21:19:22.960  INFO 8441 --- [Thread-4] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutdown in 0.045 seconds
+2016-11-10 21:22:31.715  INFO 8823 --- [main] c.u.p.SpringBootCamelActivemqApplication : Starting SpringBootCamelActivemqApplication on chris-ThinkPad-X1-Carbon-2nd with PID 8823 (/home/chris/dev/spring-boot-camel-activemq/target/classes started by chris in /home/chris/dev/spring-boot-camel-activemq)
+2016-11-10 21:22:31.723  INFO 8823 --- [main] c.u.p.SpringBootCamelActivemqApplication : No active profile set, falling back to default profiles: default
+2016-11-10 21:22:32.307  INFO 8823 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:22:32 GMT 2016]; root of context hierarchy
+2016-11-10 21:22:34.067  INFO 8823 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [class org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$61603d5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-10 21:22:34.569  INFO 8823 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-10 21:22:34.584  INFO 8823 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 21:22:34.585  INFO 8823 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 21:22:34.719  INFO 8823 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-10 21:22:34.720  INFO 8823 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2417 ms
+2016-11-10 21:22:35.170  INFO 8823 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 21:22:35.176  INFO 8823 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2016-11-10 21:22:35.177  INFO 8823 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-10 21:22:35.177  INFO 8823 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-10 21:22:35.178  INFO 8823 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-10 21:22:35.178  INFO 8823 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-10 21:22:35.178  INFO 8823 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-11-10 21:22:35.179  INFO 8823 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-11-10 21:22:36.365  INFO 8823 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:22:32 GMT 2016]; root of context hierarchy
+2016-11-10 21:22:36.456  INFO 8823 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-10 21:22:36.457  INFO 8823 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-10 21:22:36.499  INFO 8823 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:22:36.499  INFO 8823 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:22:36.549  INFO 8823 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:22:36.597  WARN 8823 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-10 21:22:37.038  INFO 8823 --- [main] o.a.c.i.converter.DefaultTypeConverter   : Loaded 193 type converters
+2016-11-10 21:22:38.056  INFO 8823 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-11-10 21:22:38.068  INFO 8823 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19827608: startup date [Thu Nov 10 21:22:38 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:22:38.108  INFO 8823 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=endpointWebMvcChildContextConfiguration; factoryMethodName=compositeHandlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcChildContextConfiguration]
+2016-11-10 21:22:38.163  INFO 8823 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2016-11-10 21:22:38.164  INFO 8823 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 21:22:38.165  INFO 8823 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 21:22:38.173  INFO 8823 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2016-11-10 21:22:38.173  INFO 8823 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 105 ms
+2016-11-10 21:22:38.179  INFO 8823 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 21:22:38.325  INFO 8823 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:22:38.326  INFO 8823 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:22:38.328  INFO 8823 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-11-10 21:22:38.328  INFO 8823 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:22:38.329  INFO 8823 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:22:38.330  INFO 8823 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2016-11-10 21:22:38.332  INFO 8823 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:22:38.333  INFO 8823 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:22:38.336  INFO 8823 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:22:38.340  INFO 8823 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:22:38.341  INFO 8823 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-11-10 21:22:38.342  INFO 8823 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:22:38.342  INFO 8823 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-11-10 21:22:38.343  INFO 8823 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-11-10 21:22:38.362  INFO 8823 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.boot.actuate.endpoint.mvc.ManagementErrorEndpoint.invoke()
+2016-11-10 21:22:38.371  INFO 8823 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:22:38.371  INFO 8823 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:22:38.380  INFO 8823 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19827608: startup date [Thu Nov 10 21:22:38 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:22:38.445  INFO 8823 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2016-11-10 21:22:38.449  INFO 8823 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-11-10 21:22:38.525  INFO 8823 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-11-10 21:22:38.595  INFO 8823 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML routes from: classpath:camel/*.xml
+2016-11-10 21:22:38.596  INFO 8823 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+2016-11-10 21:22:38.597  INFO 8823 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is starting
+2016-11-10 21:22:38.598  INFO 8823 --- [main] o.a.c.m.ManagedManagementStrategy        : JMX is enabled
+2016-11-10 21:22:38.706  INFO 8823 --- [main] o.a.c.i.DefaultRuntimeEndpointRegistry   : Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2016-11-10 21:22:38.832  INFO 8823 --- [main] o.a.camel.spring.SpringCamelContext      : StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2016-11-10 21:22:39.128  INFO 8823 --- [main] o.a.camel.spring.SpringCamelContext      : Route: route1 started and consuming from: jms://test.input
+2016-11-10 21:22:39.128  INFO 8823 --- [main] o.a.camel.spring.SpringCamelContext      : Total 1 routes, of which 1 are started.
+2016-11-10 21:22:39.129  INFO 8823 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) started in 0.531 seconds
+2016-11-10 21:22:39.139  INFO 8823 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-11-10 21:22:39.142  INFO 8823 --- [main] c.u.p.SpringBootCamelActivemqApplication : Started SpringBootCamelActivemqApplication in 8.088 seconds (JVM running for 8.692)
+2016-11-10 21:23:16.921  INFO 8823 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-11-10 21:23:16.921  INFO 8823 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-11-10 21:23:16.931  INFO 8823 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 9 ms
+2016-11-10 21:24:49.159  WARN 8823 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Setup of JMS message listener invoker failed for destination 'test.input' - trying to recover. Cause: java.io.EOFException
+2016-11-10 21:24:49.164 ERROR 8823 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:24:54.166 ERROR 8823 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=1, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:24:59.168 ERROR 8823 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=2, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:24:59.663  INFO 8823 --- [Thread-5] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:22:32 GMT 2016]; root of context hierarchy
+2016-11-10 21:24:59.666  INFO 8823 --- [Thread-5] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19827608: startup date [Thu Nov 10 21:22:38 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:24:59.693  INFO 8823 --- [Thread-5] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-11-10 21:24:59.694  INFO 8823 --- [Thread-5] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-11-10 21:24:59.699  INFO 8823 --- [Thread-5] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-11-10 21:24:59.711  INFO 8823 --- [Thread-5] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutting down
+2016-11-10 21:24:59.711  INFO 8823 --- [Thread-5] o.a.camel.impl.DefaultShutdownStrategy   : Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2016-11-10 21:24:59.718  INFO 8823 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.impl.DefaultShutdownStrategy   : Route: route1 shutdown complete, was consuming from: jms://test.input
+2016-11-10 21:24:59.718  INFO 8823 --- [Thread-5] o.a.camel.impl.DefaultShutdownStrategy   : Graceful shutdown of 1 routes completed in 0 seconds
+2016-11-10 21:24:59.743  INFO 8823 --- [Thread-5] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) uptime 2 minutes
+2016-11-10 21:24:59.743  INFO 8823 --- [Thread-5] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutdown in 0.032 seconds
+2016-11-10 21:27:10.256  INFO 9300 --- [main] c.u.p.SpringBootCamelActivemqApplication : Starting SpringBootCamelActivemqApplication on chris-ThinkPad-X1-Carbon-2nd with PID 9300 (/home/chris/dev/spring-boot-camel-activemq/target/classes started by chris in /home/chris/dev/spring-boot-camel-activemq)
+2016-11-10 21:27:10.263  INFO 9300 --- [main] c.u.p.SpringBootCamelActivemqApplication : No active profile set, falling back to default profiles: default
+2016-11-10 21:27:10.903  INFO 9300 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:27:10 GMT 2016]; root of context hierarchy
+2016-11-10 21:27:12.628  INFO 9300 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [class org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$61603d5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-10 21:27:13.198  INFO 9300 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-10 21:27:13.216  INFO 9300 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 21:27:13.218  INFO 9300 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 21:27:13.355  INFO 9300 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-10 21:27:13.355  INFO 9300 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2461 ms
+2016-11-10 21:27:13.643  INFO 9300 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 21:27:13.649  INFO 9300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2016-11-10 21:27:13.650  INFO 9300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-10 21:27:13.650  INFO 9300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-10 21:27:13.650  INFO 9300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-10 21:27:13.650  INFO 9300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-10 21:27:13.651  INFO 9300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-11-10 21:27:13.651  INFO 9300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-11-10 21:27:14.735  INFO 9300 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:27:10 GMT 2016]; root of context hierarchy
+2016-11-10 21:27:14.804  INFO 9300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-10 21:27:14.806  INFO 9300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-10 21:27:14.855  INFO 9300 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:27:14.856  INFO 9300 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:27:14.910  INFO 9300 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:27:14.957  WARN 9300 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-10 21:27:15.372  INFO 9300 --- [main] o.a.c.i.converter.DefaultTypeConverter   : Loaded 193 type converters
+2016-11-10 21:27:16.271  INFO 9300 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-11-10 21:27:16.283  INFO 9300 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19827608: startup date [Thu Nov 10 21:27:16 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:27:16.331  INFO 9300 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=endpointWebMvcChildContextConfiguration; factoryMethodName=compositeHandlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcChildContextConfiguration]
+2016-11-10 21:27:16.387  INFO 9300 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2016-11-10 21:27:16.388  INFO 9300 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 21:27:16.388  INFO 9300 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 21:27:16.394  INFO 9300 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2016-11-10 21:27:16.394  INFO 9300 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 111 ms
+2016-11-10 21:27:16.403  INFO 9300 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 21:27:16.537  INFO 9300 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:27:16.538  INFO 9300 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:27:16.540  INFO 9300 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-11-10 21:27:16.540  INFO 9300 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:27:16.541  INFO 9300 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:27:16.542  INFO 9300 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2016-11-10 21:27:16.544  INFO 9300 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:27:16.545  INFO 9300 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:27:16.548  INFO 9300 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:27:16.550  INFO 9300 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:27:16.551  INFO 9300 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-11-10 21:27:16.552  INFO 9300 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:27:16.552  INFO 9300 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-11-10 21:27:16.553  INFO 9300 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-11-10 21:27:16.572  INFO 9300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.boot.actuate.endpoint.mvc.ManagementErrorEndpoint.invoke()
+2016-11-10 21:27:16.577  INFO 9300 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:27:16.578  INFO 9300 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:27:16.586  INFO 9300 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19827608: startup date [Thu Nov 10 21:27:16 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:27:16.648  INFO 9300 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2016-11-10 21:27:16.652  INFO 9300 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-11-10 21:27:16.719  INFO 9300 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-11-10 21:27:16.776  INFO 9300 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML routes from: classpath:camel/*.xml
+2016-11-10 21:27:16.776  INFO 9300 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+2016-11-10 21:27:16.777  INFO 9300 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is starting
+2016-11-10 21:27:16.778  INFO 9300 --- [main] o.a.c.m.ManagedManagementStrategy        : JMX is enabled
+2016-11-10 21:27:16.877  INFO 9300 --- [main] o.a.c.i.DefaultRuntimeEndpointRegistry   : Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2016-11-10 21:27:17.021  INFO 9300 --- [main] o.a.camel.spring.SpringCamelContext      : StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2016-11-10 21:27:17.353  INFO 9300 --- [main] o.a.camel.spring.SpringCamelContext      : Route: route1 started and consuming from: jms://test.input
+2016-11-10 21:27:17.353  INFO 9300 --- [main] o.a.camel.spring.SpringCamelContext      : Total 1 routes, of which 1 are started.
+2016-11-10 21:27:17.359  INFO 9300 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) started in 0.576 seconds
+2016-11-10 21:27:17.373  INFO 9300 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-11-10 21:27:17.377  INFO 9300 --- [main] c.u.p.SpringBootCamelActivemqApplication : Started SpringBootCamelActivemqApplication in 7.74 seconds (JVM running for 8.3)
+2016-11-10 21:28:09.311  INFO 9300 --- [Thread-5] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:27:10 GMT 2016]; root of context hierarchy
+2016-11-10 21:28:09.313  INFO 9300 --- [Thread-5] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19827608: startup date [Thu Nov 10 21:27:16 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:28:09.377  INFO 9300 --- [Thread-5] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-11-10 21:28:09.378  INFO 9300 --- [Thread-5] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-11-10 21:28:09.379  INFO 9300 --- [Thread-5] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-11-10 21:28:09.385  INFO 9300 --- [Thread-5] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutting down
+2016-11-10 21:28:09.386  INFO 9300 --- [Thread-5] o.a.camel.impl.DefaultShutdownStrategy   : Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2016-11-10 21:28:09.458  INFO 9300 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.impl.DefaultShutdownStrategy   : Route: route1 shutdown complete, was consuming from: jms://test.input
+2016-11-10 21:28:09.460  INFO 9300 --- [Thread-5] o.a.camel.impl.DefaultShutdownStrategy   : Graceful shutdown of 1 routes completed in 0 seconds
+2016-11-10 21:28:09.480  INFO 9300 --- [Thread-5] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) uptime 52.703 seconds
+2016-11-10 21:28:09.480  INFO 9300 --- [Thread-5] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutdown in 0.095 seconds
+2016-11-10 21:28:16.696  INFO 9435 --- [main] c.u.p.SpringBootCamelActivemqApplication : Starting SpringBootCamelActivemqApplication on chris-ThinkPad-X1-Carbon-2nd with PID 9435 (/home/chris/dev/spring-boot-camel-activemq/target/classes started by chris in /home/chris/dev/spring-boot-camel-activemq)
+2016-11-10 21:28:16.711  INFO 9435 --- [main] c.u.p.SpringBootCamelActivemqApplication : No active profile set, falling back to default profiles: default
+2016-11-10 21:28:17.282  INFO 9435 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:28:17 GMT 2016]; root of context hierarchy
+2016-11-10 21:28:18.918  INFO 9435 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [class org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$dec8b06f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-10 21:28:19.373  INFO 9435 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-10 21:28:19.388  INFO 9435 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 21:28:19.389  INFO 9435 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 21:28:19.485  INFO 9435 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-10 21:28:19.485  INFO 9435 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2212 ms
+2016-11-10 21:28:19.731  INFO 9435 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 21:28:19.737  INFO 9435 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2016-11-10 21:28:19.738  INFO 9435 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-10 21:28:19.738  INFO 9435 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-10 21:28:19.738  INFO 9435 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-10 21:28:19.738  INFO 9435 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-10 21:28:19.738  INFO 9435 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-11-10 21:28:19.739  INFO 9435 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-11-10 21:28:20.800  INFO 9435 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:28:17 GMT 2016]; root of context hierarchy
+2016-11-10 21:28:20.865  INFO 9435 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-10 21:28:20.866  INFO 9435 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-10 21:28:20.898  INFO 9435 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:28:20.898  INFO 9435 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:28:20.934  INFO 9435 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:28:20.969  WARN 9435 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-10 21:28:21.422  INFO 9435 --- [main] o.a.c.i.converter.DefaultTypeConverter   : Loaded 193 type converters
+2016-11-10 21:28:22.313  INFO 9435 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-11-10 21:28:22.327  INFO 9435 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19f02280: startup date [Thu Nov 10 21:28:22 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:28:22.364  INFO 9435 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=endpointWebMvcChildContextConfiguration; factoryMethodName=compositeHandlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcChildContextConfiguration]
+2016-11-10 21:28:22.420  INFO 9435 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2016-11-10 21:28:22.421  INFO 9435 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 21:28:22.421  INFO 9435 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 21:28:22.436  INFO 9435 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2016-11-10 21:28:22.437  INFO 9435 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 110 ms
+2016-11-10 21:28:22.443  INFO 9435 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 21:28:22.593  INFO 9435 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-11-10 21:28:22.598  INFO 9435 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:28:22.600  INFO 9435 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:28:22.603  INFO 9435 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:28:22.605  INFO 9435 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:28:22.608  INFO 9435 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-11-10 21:28:22.608  INFO 9435 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:28:22.612  INFO 9435 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:28:22.616  INFO 9435 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:28:22.620  INFO 9435 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-11-10 21:28:22.621  INFO 9435 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:28:22.622  INFO 9435 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:28:22.623  INFO 9435 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2016-11-10 21:28:22.624  INFO 9435 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-11-10 21:28:22.652  INFO 9435 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:28:22.652  INFO 9435 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:28:22.666  INFO 9435 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19f02280: startup date [Thu Nov 10 21:28:22 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:28:22.680  INFO 9435 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.boot.actuate.endpoint.mvc.ManagementErrorEndpoint.invoke()
+2016-11-10 21:28:22.775  INFO 9435 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2016-11-10 21:28:22.781  INFO 9435 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-11-10 21:28:22.882  INFO 9435 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-11-10 21:28:22.942  INFO 9435 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML routes from: classpath:camel/*.xml
+2016-11-10 21:28:22.942  INFO 9435 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+2016-11-10 21:28:22.943  INFO 9435 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is starting
+2016-11-10 21:28:22.945  INFO 9435 --- [main] o.a.c.m.ManagedManagementStrategy        : JMX is enabled
+2016-11-10 21:28:23.032  INFO 9435 --- [main] o.a.c.i.DefaultRuntimeEndpointRegistry   : Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2016-11-10 21:28:23.207  INFO 9435 --- [main] o.a.camel.spring.SpringCamelContext      : StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2016-11-10 21:28:23.468  INFO 9435 --- [main] o.a.camel.spring.SpringCamelContext      : Route: route1 started and consuming from: jms://test.input
+2016-11-10 21:28:23.468  INFO 9435 --- [main] o.a.camel.spring.SpringCamelContext      : Total 1 routes, of which 1 are started.
+2016-11-10 21:28:23.469  INFO 9435 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) started in 0.525 seconds
+2016-11-10 21:28:23.476  INFO 9435 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-11-10 21:28:23.480  INFO 9435 --- [main] c.u.p.SpringBootCamelActivemqApplication : Started SpringBootCamelActivemqApplication in 7.611 seconds (JVM running for 8.19)
+2016-11-10 21:28:53.679  INFO 9435 --- [Thread-5] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:28:17 GMT 2016]; root of context hierarchy
+2016-11-10 21:28:53.680  INFO 9435 --- [Thread-5] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19f02280: startup date [Thu Nov 10 21:28:22 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:28:53.743  INFO 9435 --- [Thread-5] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-11-10 21:28:53.744  INFO 9435 --- [Thread-5] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-11-10 21:28:53.745  INFO 9435 --- [Thread-5] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-11-10 21:28:53.750  INFO 9435 --- [Thread-5] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutting down
+2016-11-10 21:28:53.751  INFO 9435 --- [Thread-5] o.a.camel.impl.DefaultShutdownStrategy   : Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2016-11-10 21:28:54.529  INFO 9435 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.impl.DefaultShutdownStrategy   : Route: route1 shutdown complete, was consuming from: jms://test.input
+2016-11-10 21:28:54.530  INFO 9435 --- [Thread-5] o.a.camel.impl.DefaultShutdownStrategy   : Graceful shutdown of 1 routes completed in 0 seconds
+2016-11-10 21:28:54.557  INFO 9435 --- [Thread-5] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) uptime 31.614 seconds
+2016-11-10 21:28:54.557  INFO 9435 --- [Thread-5] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutdown in 0.807 seconds
+2016-11-10 21:29:05.610  INFO 9535 --- [main] c.u.p.SpringBootCamelActivemqApplication : Starting SpringBootCamelActivemqApplication on chris-ThinkPad-X1-Carbon-2nd with PID 9535 (/home/chris/dev/spring-boot-camel-activemq/target/classes started by chris in /home/chris/dev/spring-boot-camel-activemq)
+2016-11-10 21:29:05.614  INFO 9535 --- [main] c.u.p.SpringBootCamelActivemqApplication : No active profile set, falling back to default profiles: default
+2016-11-10 21:29:06.191  INFO 9535 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:29:06 GMT 2016]; root of context hierarchy
+2016-11-10 21:29:07.820  INFO 9535 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [class org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$9e9d68e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-10 21:29:08.372  INFO 9535 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-10 21:29:08.392  INFO 9535 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 21:29:08.393  INFO 9535 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 21:29:08.515  INFO 9535 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-10 21:29:08.515  INFO 9535 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2328 ms
+2016-11-10 21:29:08.785  INFO 9535 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 21:29:08.791  INFO 9535 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2016-11-10 21:29:08.792  INFO 9535 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-10 21:29:08.792  INFO 9535 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-10 21:29:08.793  INFO 9535 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-10 21:29:08.793  INFO 9535 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-10 21:29:08.793  INFO 9535 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-11-10 21:29:08.793  INFO 9535 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-11-10 21:29:08.846  WARN 9535 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myAppConfiguration': Unsatisfied dependency expressed through field 'activeMQComponent'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.apache.activemq.camel.component.ActiveMQComponent' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2016-11-10 21:29:08.851  INFO 9535 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-11-10 21:29:08.888  INFO 9535 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-10 21:29:09.007 ERROR 9535 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field activeMQComponent in co.uk.popupengineering.MyAppConfiguration required a bean of type 'org.apache.activemq.camel.component.ActiveMQComponent' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.apache.activemq.camel.component.ActiveMQComponent' in your configuration.
+
+2016-11-10 21:29:42.185  INFO 9591 --- [main] c.u.p.SpringBootCamelActivemqApplication : Starting SpringBootCamelActivemqApplication on chris-ThinkPad-X1-Carbon-2nd with PID 9591 (/home/chris/dev/spring-boot-camel-activemq/target/classes started by chris in /home/chris/dev/spring-boot-camel-activemq)
+2016-11-10 21:29:42.194  INFO 9591 --- [main] c.u.p.SpringBootCamelActivemqApplication : No active profile set, falling back to default profiles: default
+2016-11-10 21:29:42.770  INFO 9591 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:29:42 GMT 2016]; root of context hierarchy
+2016-11-10 21:29:44.413  INFO 9591 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [class org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$7ae75776] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-10 21:29:44.972  INFO 9591 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-10 21:29:44.991  INFO 9591 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 21:29:44.992  INFO 9591 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 21:29:45.118  INFO 9591 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-10 21:29:45.119  INFO 9591 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2353 ms
+2016-11-10 21:29:45.407  INFO 9591 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 21:29:45.411  INFO 9591 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2016-11-10 21:29:45.411  INFO 9591 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-10 21:29:45.411  INFO 9591 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-10 21:29:45.412  INFO 9591 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-10 21:29:45.412  INFO 9591 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-10 21:29:45.412  INFO 9591 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-11-10 21:29:45.412  INFO 9591 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-11-10 21:29:45.857  INFO 9591 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:29:42 GMT 2016]; root of context hierarchy
+2016-11-10 21:29:45.936  INFO 9591 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-10 21:29:45.937  INFO 9591 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-10 21:29:45.976  INFO 9591 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:29:45.977  INFO 9591 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:29:46.020  INFO 9591 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:29:46.058  WARN 9591 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-10 21:29:47.122  INFO 9591 --- [main] o.a.c.i.converter.DefaultTypeConverter   : Loaded 193 type converters
+2016-11-10 21:29:48.155  INFO 9591 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-11-10 21:29:48.168  INFO 9591 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1472208d: startup date [Thu Nov 10 21:29:48 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:29:48.203  INFO 9591 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=endpointWebMvcChildContextConfiguration; factoryMethodName=compositeHandlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcChildContextConfiguration]
+2016-11-10 21:29:48.247  INFO 9591 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2016-11-10 21:29:48.248  INFO 9591 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 21:29:48.249  INFO 9591 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 21:29:48.254  INFO 9591 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2016-11-10 21:29:48.254  INFO 9591 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 86 ms
+2016-11-10 21:29:48.259  INFO 9591 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 21:29:48.366  INFO 9591 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-11-10 21:29:48.371  INFO 9591 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:29:48.373  INFO 9591 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:29:48.376  INFO 9591 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-11-10 21:29:48.377  INFO 9591 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:29:48.379  INFO 9591 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:29:48.381  INFO 9591 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:29:48.383  INFO 9591 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-11-10 21:29:48.384  INFO 9591 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:29:48.394  INFO 9591 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-11-10 21:29:48.395  INFO 9591 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:29:48.396  INFO 9591 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2016-11-10 21:29:48.397  INFO 9591 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:29:48.398  INFO 9591 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:29:48.422  INFO 9591 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.boot.actuate.endpoint.mvc.ManagementErrorEndpoint.invoke()
+2016-11-10 21:29:48.430  INFO 9591 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:29:48.430  INFO 9591 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:29:48.442  INFO 9591 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1472208d: startup date [Thu Nov 10 21:29:48 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:29:48.519  INFO 9591 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2016-11-10 21:29:48.525  INFO 9591 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-11-10 21:29:48.625  INFO 9591 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-11-10 21:29:48.699  INFO 9591 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML routes from: classpath:camel/*.xml
+2016-11-10 21:29:48.701  INFO 9591 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+2016-11-10 21:29:48.702  INFO 9591 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is starting
+2016-11-10 21:29:48.704  INFO 9591 --- [main] o.a.c.m.ManagedManagementStrategy        : JMX is enabled
+2016-11-10 21:29:48.822  INFO 9591 --- [main] o.a.c.i.DefaultRuntimeEndpointRegistry   : Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2016-11-10 21:29:48.958  INFO 9591 --- [main] o.a.camel.spring.SpringCamelContext      : StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2016-11-10 21:29:49.204  INFO 9591 --- [main] o.a.camel.spring.SpringCamelContext      : Route: route1 started and consuming from: jms://test.input
+2016-11-10 21:29:49.205  INFO 9591 --- [main] o.a.camel.spring.SpringCamelContext      : Total 1 routes, of which 1 are started.
+2016-11-10 21:29:49.206  INFO 9591 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) started in 0.503 seconds
+2016-11-10 21:29:49.214  INFO 9591 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-11-10 21:29:49.217  INFO 9591 --- [main] c.u.p.SpringBootCamelActivemqApplication : Started SpringBootCamelActivemqApplication in 7.851 seconds (JVM running for 8.412)
+2016-11-10 21:30:45.913  INFO 9591 --- [Thread-5] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:29:42 GMT 2016]; root of context hierarchy
+2016-11-10 21:30:45.921  INFO 9591 --- [Thread-5] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1472208d: startup date [Thu Nov 10 21:29:48 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:30:45.987  INFO 9591 --- [Thread-5] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-11-10 21:30:45.987  INFO 9591 --- [Thread-5] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-11-10 21:30:45.993  INFO 9591 --- [Thread-5] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-11-10 21:30:45.999  INFO 9591 --- [Thread-5] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutting down
+2016-11-10 21:30:46.000  INFO 9591 --- [Thread-5] o.a.camel.impl.DefaultShutdownStrategy   : Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2016-11-10 21:30:46.264  INFO 9591 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.impl.DefaultShutdownStrategy   : Route: route1 shutdown complete, was consuming from: jms://test.input
+2016-11-10 21:30:46.265  INFO 9591 --- [Thread-5] o.a.camel.impl.DefaultShutdownStrategy   : Graceful shutdown of 1 routes completed in 0 seconds
+2016-11-10 21:30:46.284  INFO 9591 --- [Thread-5] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) uptime 57.582 seconds
+2016-11-10 21:30:46.285  INFO 9591 --- [Thread-5] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutdown in 0.285 seconds
+2016-11-10 21:30:50.138  INFO 9708 --- [main] c.u.p.SpringBootCamelActivemqApplication : Starting SpringBootCamelActivemqApplication on chris-ThinkPad-X1-Carbon-2nd with PID 9708 (/home/chris/dev/spring-boot-camel-activemq/target/classes started by chris in /home/chris/dev/spring-boot-camel-activemq)
+2016-11-10 21:30:50.154  INFO 9708 --- [main] c.u.p.SpringBootCamelActivemqApplication : No active profile set, falling back to default profiles: default
+2016-11-10 21:30:50.719  INFO 9708 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:30:50 GMT 2016]; root of context hierarchy
+2016-11-10 21:30:52.254  INFO 9708 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [class org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$9e9d68e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-10 21:30:52.701  INFO 9708 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-10 21:30:52.715  INFO 9708 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 21:30:52.717  INFO 9708 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 21:30:52.826  INFO 9708 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-10 21:30:52.827  INFO 9708 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2116 ms
+2016-11-10 21:30:53.092  INFO 9708 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 21:30:53.097  INFO 9708 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2016-11-10 21:30:53.097  INFO 9708 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-10 21:30:53.098  INFO 9708 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-10 21:30:53.098  INFO 9708 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-10 21:30:53.098  INFO 9708 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-10 21:30:53.098  INFO 9708 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-11-10 21:30:53.099  INFO 9708 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-11-10 21:30:53.468  INFO 9708 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:30:50 GMT 2016]; root of context hierarchy
+2016-11-10 21:30:53.549  INFO 9708 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-10 21:30:53.550  INFO 9708 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-10 21:30:53.593  INFO 9708 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:30:53.593  INFO 9708 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:30:53.647  INFO 9708 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:30:53.697  WARN 9708 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-10 21:30:54.764  INFO 9708 --- [main] o.a.c.i.converter.DefaultTypeConverter   : Loaded 193 type converters
+2016-11-10 21:30:55.769  INFO 9708 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-11-10 21:30:55.780  INFO 9708 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6db328f8: startup date [Thu Nov 10 21:30:55 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:30:55.816  INFO 9708 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=endpointWebMvcChildContextConfiguration; factoryMethodName=compositeHandlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcChildContextConfiguration]
+2016-11-10 21:30:55.864  INFO 9708 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2016-11-10 21:30:55.865  INFO 9708 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 21:30:55.865  INFO 9708 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 21:30:55.875  INFO 9708 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2016-11-10 21:30:55.875  INFO 9708 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 95 ms
+2016-11-10 21:30:55.879  INFO 9708 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 21:30:56.025  INFO 9708 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-11-10 21:30:56.028  INFO 9708 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:30:56.029  INFO 9708 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:30:56.031  INFO 9708 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:30:56.032  INFO 9708 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:30:56.033  INFO 9708 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2016-11-10 21:30:56.034  INFO 9708 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:30:56.036  INFO 9708 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-11-10 21:30:56.036  INFO 9708 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:30:56.037  INFO 9708 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-11-10 21:30:56.044  INFO 9708 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-11-10 21:30:56.044  INFO 9708 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:30:56.045  INFO 9708 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:30:56.046  INFO 9708 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:30:56.067  INFO 9708 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.boot.actuate.endpoint.mvc.ManagementErrorEndpoint.invoke()
+2016-11-10 21:30:56.076  INFO 9708 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:30:56.076  INFO 9708 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:30:56.086  INFO 9708 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6db328f8: startup date [Thu Nov 10 21:30:55 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:30:56.184  INFO 9708 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2016-11-10 21:30:56.190  INFO 9708 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-11-10 21:30:56.291  INFO 9708 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-11-10 21:30:56.356  INFO 9708 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML routes from: classpath:camel/*.xml
+2016-11-10 21:30:56.357  INFO 9708 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+2016-11-10 21:30:56.358  INFO 9708 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is starting
+2016-11-10 21:30:56.361  INFO 9708 --- [main] o.a.c.m.ManagedManagementStrategy        : JMX is enabled
+2016-11-10 21:30:56.469  INFO 9708 --- [main] o.a.c.i.DefaultRuntimeEndpointRegistry   : Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2016-11-10 21:30:56.635  INFO 9708 --- [main] o.a.camel.spring.SpringCamelContext      : StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2016-11-10 21:30:56.914  INFO 9708 --- [main] o.a.camel.spring.SpringCamelContext      : Route: route1 started and consuming from: jms://test.input
+2016-11-10 21:30:56.916  INFO 9708 --- [main] o.a.camel.spring.SpringCamelContext      : Total 1 routes, of which 1 are started.
+2016-11-10 21:30:56.918  INFO 9708 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) started in 0.558 seconds
+2016-11-10 21:30:56.929  INFO 9708 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-11-10 21:30:56.934  INFO 9708 --- [main] c.u.p.SpringBootCamelActivemqApplication : Started SpringBootCamelActivemqApplication in 7.556 seconds (JVM running for 8.08)
+2016-11-10 21:31:00.995  INFO 9708 --- [Thread-5] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:30:50 GMT 2016]; root of context hierarchy
+2016-11-10 21:31:00.996  INFO 9708 --- [Thread-5] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6db328f8: startup date [Thu Nov 10 21:30:55 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:31:01.059  INFO 9708 --- [Thread-5] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-11-10 21:31:01.059  INFO 9708 --- [Thread-5] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-11-10 21:31:01.060  INFO 9708 --- [Thread-5] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-11-10 21:31:01.066  INFO 9708 --- [Thread-5] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutting down
+2016-11-10 21:31:01.067  INFO 9708 --- [Thread-5] o.a.camel.impl.DefaultShutdownStrategy   : Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2016-11-10 21:31:01.963  INFO 9708 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.impl.DefaultShutdownStrategy   : Route: route1 shutdown complete, was consuming from: jms://test.input
+2016-11-10 21:31:01.964  INFO 9708 --- [Thread-5] o.a.camel.impl.DefaultShutdownStrategy   : Graceful shutdown of 1 routes completed in 0 seconds
+2016-11-10 21:31:01.994  INFO 9708 --- [Thread-5] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) uptime 5.636 seconds
+2016-11-10 21:31:01.995  INFO 9708 --- [Thread-5] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutdown in 0.928 seconds
+2016-11-10 21:31:13.730  INFO 9877 --- [main] c.u.p.SpringBootCamelActivemqApplication : Starting SpringBootCamelActivemqApplication on chris-ThinkPad-X1-Carbon-2nd with PID 9877 (/home/chris/dev/spring-boot-camel-activemq/target/classes started by chris in /home/chris/dev/spring-boot-camel-activemq)
+2016-11-10 21:31:13.741  INFO 9877 --- [main] c.u.p.SpringBootCamelActivemqApplication : No active profile set, falling back to default profiles: default
+2016-11-10 21:31:14.414  INFO 9877 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:31:14 GMT 2016]; root of context hierarchy
+2016-11-10 21:31:16.036  INFO 9877 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [class org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$18611944] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-10 21:31:16.510  INFO 9877 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-10 21:31:16.528  INFO 9877 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 21:31:16.530  INFO 9877 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 21:31:16.652  INFO 9877 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-10 21:31:16.653  INFO 9877 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2254 ms
+2016-11-10 21:31:16.933  INFO 9877 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 21:31:16.938  INFO 9877 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2016-11-10 21:31:16.938  INFO 9877 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-10 21:31:16.939  INFO 9877 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-10 21:31:16.939  INFO 9877 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-10 21:31:16.939  INFO 9877 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-10 21:31:16.939  INFO 9877 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-11-10 21:31:16.939  INFO 9877 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-11-10 21:31:17.339  INFO 9877 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:31:14 GMT 2016]; root of context hierarchy
+2016-11-10 21:31:17.431  INFO 9877 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-10 21:31:17.432  INFO 9877 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-10 21:31:17.475  INFO 9877 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:31:17.476  INFO 9877 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:31:17.527  INFO 9877 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:31:17.582  WARN 9877 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-10 21:31:18.579  INFO 9877 --- [main] o.a.c.i.converter.DefaultTypeConverter   : Loaded 193 type converters
+2016-11-10 21:31:19.395  INFO 9877 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-11-10 21:31:19.406  INFO 9877 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402f8592: startup date [Thu Nov 10 21:31:19 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:31:19.442  INFO 9877 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=endpointWebMvcChildContextConfiguration; factoryMethodName=compositeHandlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcChildContextConfiguration]
+2016-11-10 21:31:19.493  INFO 9877 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2016-11-10 21:31:19.494  INFO 9877 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 21:31:19.495  INFO 9877 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 21:31:19.500  INFO 9877 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2016-11-10 21:31:19.501  INFO 9877 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 95 ms
+2016-11-10 21:31:19.507  INFO 9877 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 21:31:19.646  INFO 9877 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:31:19.647  INFO 9877 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:31:19.648  INFO 9877 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:31:19.649  INFO 9877 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:31:19.651  INFO 9877 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-11-10 21:31:19.652  INFO 9877 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:31:19.653  INFO 9877 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:31:19.654  INFO 9877 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-11-10 21:31:19.659  INFO 9877 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-11-10 21:31:19.660  INFO 9877 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:31:19.660  INFO 9877 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-11-10 21:31:19.661  INFO 9877 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:31:19.661  INFO 9877 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:31:19.662  INFO 9877 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2016-11-10 21:31:19.680  INFO 9877 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.boot.actuate.endpoint.mvc.ManagementErrorEndpoint.invoke()
+2016-11-10 21:31:19.687  INFO 9877 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:31:19.687  INFO 9877 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:31:19.696  INFO 9877 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402f8592: startup date [Thu Nov 10 21:31:19 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:31:19.768  INFO 9877 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2016-11-10 21:31:19.773  INFO 9877 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-11-10 21:31:19.843  INFO 9877 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-11-10 21:31:19.900  INFO 9877 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML routes from: classpath:camel/*.xml
+2016-11-10 21:31:19.900  INFO 9877 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+2016-11-10 21:31:19.901  INFO 9877 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is starting
+2016-11-10 21:31:19.902  INFO 9877 --- [main] o.a.c.m.ManagedManagementStrategy        : JMX is enabled
+2016-11-10 21:31:19.996  INFO 9877 --- [main] o.a.c.i.DefaultRuntimeEndpointRegistry   : Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2016-11-10 21:31:20.143  INFO 9877 --- [main] o.a.camel.spring.SpringCamelContext      : StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2016-11-10 21:31:20.353  INFO 9877 --- [main] o.a.camel.spring.SpringCamelContext      : Route: route1 started and consuming from: jms://test.input
+2016-11-10 21:31:20.354  INFO 9877 --- [main] o.a.camel.spring.SpringCamelContext      : Total 1 routes, of which 1 are started.
+2016-11-10 21:31:20.360  INFO 9877 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) started in 0.454 seconds
+2016-11-10 21:31:20.366  INFO 9877 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-11-10 21:31:20.370  INFO 9877 --- [main] c.u.p.SpringBootCamelActivemqApplication : Started SpringBootCamelActivemqApplication in 7.312 seconds (JVM running for 7.825)
+2016-11-10 21:31:25.370  INFO 9877 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : JMS message listener invoker needs to establish shared Connection
+2016-11-10 21:31:25.378 ERROR 9877 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:31:30.380 ERROR 9877 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=1, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:31:35.383 ERROR 9877 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=2, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:31:40.385 ERROR 9877 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=3, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:31:45.388 ERROR 9877 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=4, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:31:50.391 ERROR 9877 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=5, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:31:55.393 ERROR 9877 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=6, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:32:00.395 ERROR 9877 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=7, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:32:05.397 ERROR 9877 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=8, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:32:10.399 ERROR 9877 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=9, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:32:15.401 ERROR 9877 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=10, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:32:20.403 ERROR 9877 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=11, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:32:25.406 ERROR 9877 --- [Camel (camel-1) thread #0 - JmsConsumer[test.input]] c.c.j.DefaultJmsMessageListenerContainer : Could not refresh JMS Connection for destination 'test.input' - retrying using FixedBackOff{interval=5000, currentAttempts=12, maxAttempts=unlimited}. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+2016-11-10 21:32:29.969  INFO 9877 --- [Thread-4] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:31:14 GMT 2016]; root of context hierarchy
+2016-11-10 21:32:29.972  INFO 9877 --- [Thread-4] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402f8592: startup date [Thu Nov 10 21:31:19 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:32:30.049  INFO 9877 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2016-11-10 21:32:30.050  INFO 9877 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-11-10 21:32:30.051  INFO 9877 --- [Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-11-10 21:32:30.056  INFO 9877 --- [Thread-4] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutting down
+2016-11-10 21:32:30.057  INFO 9877 --- [Thread-4] o.a.camel.impl.DefaultShutdownStrategy   : Starting to graceful shutdown 1 routes (timeout 300 seconds)
+2016-11-10 21:32:30.061  INFO 9877 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.impl.DefaultShutdownStrategy   : Route: route1 shutdown complete, was consuming from: jms://test.input
+2016-11-10 21:32:30.062  INFO 9877 --- [Thread-4] o.a.camel.impl.DefaultShutdownStrategy   : Graceful shutdown of 1 routes completed in 0 seconds
+2016-11-10 21:32:30.085  INFO 9877 --- [Thread-4] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) uptime 1 minute
+2016-11-10 21:32:30.085  INFO 9877 --- [Thread-4] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is shutdown in 0.029 seconds
+2016-11-10 21:32:53.217  INFO 9993 --- [main] c.u.p.SpringBootCamelActivemqApplication : Starting SpringBootCamelActivemqApplication on chris-ThinkPad-X1-Carbon-2nd with PID 9993 (/home/chris/dev/spring-boot-camel-activemq/target/classes started by chris in /home/chris/dev/spring-boot-camel-activemq)
+2016-11-10 21:32:53.235  INFO 9993 --- [main] c.u.p.SpringBootCamelActivemqApplication : No active profile set, falling back to default profiles: default
+2016-11-10 21:32:53.805  INFO 9993 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:32:53 GMT 2016]; root of context hierarchy
+2016-11-10 21:32:55.295  INFO 9993 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [class org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$e7251c13] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-11-10 21:32:55.831  INFO 9993 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-11-10 21:32:55.863  INFO 9993 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 21:32:55.865  INFO 9993 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 21:32:55.993  INFO 9993 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-11-10 21:32:55.993  INFO 9993 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2197 ms
+2016-11-10 21:32:56.267  INFO 9993 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 21:32:56.271  INFO 9993 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2016-11-10 21:32:56.272  INFO 9993 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-11-10 21:32:56.272  INFO 9993 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-11-10 21:32:56.272  INFO 9993 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-11-10 21:32:56.272  INFO 9993 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-11-10 21:32:56.273  INFO 9993 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-11-10 21:32:56.273  INFO 9993 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-11-10 21:32:56.603  INFO 9993 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a: startup date [Thu Nov 10 21:32:53 GMT 2016]; root of context hierarchy
+2016-11-10 21:32:56.667  INFO 9993 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-11-10 21:32:56.669  INFO 9993 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-11-10 21:32:56.703  INFO 9993 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:32:56.704  INFO 9993 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:32:56.748  INFO 9993 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:32:56.789  WARN 9993 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2016-11-10 21:32:57.766  INFO 9993 --- [main] o.a.c.i.converter.DefaultTypeConverter   : Loaded 193 type converters
+2016-11-10 21:32:58.825  INFO 9993 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-11-10 21:32:58.837  INFO 9993 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@191c6e13: startup date [Thu Nov 10 21:32:58 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:32:58.879  INFO 9993 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=endpointWebMvcChildContextConfiguration; factoryMethodName=compositeHandlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcChildContextConfiguration]
+2016-11-10 21:32:58.935  INFO 9993 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2016-11-10 21:32:58.936  INFO 9993 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-11-10 21:32:58.937  INFO 9993 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-11-10 21:32:58.944  INFO 9993 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2016-11-10 21:32:58.944  INFO 9993 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 107 ms
+2016-11-10 21:32:58.954  INFO 9993 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-11-10 21:32:59.129  INFO 9993 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-11-10 21:32:59.130  INFO 9993 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:32:59.131  INFO 9993 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:32:59.135  INFO 9993 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-11-10 21:32:59.135  INFO 9993 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:32:59.138  INFO 9993 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:32:59.139  INFO 9993 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:32:59.143  INFO 9993 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:32:59.148  INFO 9993 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:32:59.149  INFO 9993 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2016-11-10 21:32:59.150  INFO 9993 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-11-10 21:32:59.151  INFO 9993 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:32:59.153  INFO 9993 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-11-10 21:32:59.153  INFO 9993 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-11-10 21:32:59.177  INFO 9993 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.boot.actuate.endpoint.mvc.ManagementErrorEndpoint.invoke()
+2016-11-10 21:32:59.185  INFO 9993 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:32:59.185  INFO 9993 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-11-10 21:32:59.202  INFO 9993 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@191c6e13: startup date [Thu Nov 10 21:32:58 GMT 2016]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@38d8f54a
+2016-11-10 21:32:59.276  INFO 9993 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2016-11-10 21:32:59.281  INFO 9993 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-11-10 21:32:59.350  INFO 9993 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2016-11-10 21:32:59.414  INFO 9993 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML routes from: classpath:camel/*.xml
+2016-11-10 21:32:59.414  INFO 9993 --- [main] o.a.camel.spring.boot.RoutesCollector    : Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+2016-11-10 21:32:59.415  INFO 9993 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) is starting
+2016-11-10 21:32:59.417  INFO 9993 --- [main] o.a.c.m.ManagedManagementStrategy        : JMX is enabled
+2016-11-10 21:32:59.537  INFO 9993 --- [main] o.a.c.i.DefaultRuntimeEndpointRegistry   : Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2016-11-10 21:32:59.704  INFO 9993 --- [main] o.a.camel.spring.SpringCamelContext      : StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2016-11-10 21:32:59.854  INFO 9993 --- [main] o.apache.activemq.broker.BrokerService   : Using Persistence Adapter: MemoryPersistenceAdapter
+2016-11-10 21:32:59.906  INFO 9993 --- [JMX connector] o.a.a.broker.jmx.ManagementContext       : JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi
+2016-11-10 21:33:00.024  INFO 9993 --- [main] o.apache.activemq.broker.BrokerService   : Apache ActiveMQ 5.13.4 (localhost, ID:chris-ThinkPad-X1-Carbon-2nd-42541-1478813579885-0:1) is starting
+2016-11-10 21:33:00.035  INFO 9993 --- [main] o.apache.activemq.broker.BrokerService   : Apache ActiveMQ 5.13.4 (localhost, ID:chris-ThinkPad-X1-Carbon-2nd-42541-1478813579885-0:1) started
+2016-11-10 21:33:00.035  INFO 9993 --- [main] o.apache.activemq.broker.BrokerService   : For help or more information please see: http://activemq.apache.org
+2016-11-10 21:33:00.072  INFO 9993 --- [main] o.a.activemq.broker.TransportConnector   : Connector vm://localhost started
+2016-11-10 21:33:00.124  INFO 9993 --- [main] o.a.camel.spring.SpringCamelContext      : Route: route1 started and consuming from: jms://test.input
+2016-11-10 21:33:00.126  INFO 9993 --- [main] o.a.camel.spring.SpringCamelContext      : Total 1 routes, of which 1 are started.
+2016-11-10 21:33:00.127  INFO 9993 --- [main] o.a.camel.spring.SpringCamelContext      : Apache Camel 2.18.0 (CamelContext: camel-1) started in 0.711 seconds
+2016-11-10 21:33:00.131  INFO 9993 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-11-10 21:33:00.134  INFO 9993 --- [main] c.u.p.SpringBootCamelActivemqApplication : Started SpringBootCamelActivemqApplication in 7.712 seconds (JVM running for 8.278)
